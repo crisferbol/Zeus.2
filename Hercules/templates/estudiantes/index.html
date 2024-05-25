@@ -1,0 +1,71 @@
+{% extends "plantilla.html" %}
+
+{% block titulo %} Estudiantes {% endblock %}
+
+{% block contenido %}
+
+    <div class="card">
+        <div class="card-header">
+            <a
+                name=""
+                id=""
+                class="btn btn-success"
+                href="{% url 'crear' %}"
+                role="button"
+                >Agregar Estudiante</a
+            >
+
+        </div>
+        <div class="card-body">
+            <h4 class="card-title">Estudiantes</h4>
+           
+            <div
+                class="table-responsive">
+                <table
+                    class="table table-primary">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NOMBRES</th>
+                            <th scope="col">APELLIDOS</th>
+                            <th scope="col">FOTO</th>
+                            <th scope="col">CLASE</th>
+                            <th scope="col">ACCIONES</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="">
+                            <td scope="row">1</td>
+                            <td>Carlos Maria</td>
+                            <td>Perez Florez</td>
+                            <td>foto_1.jpg</td>
+                            <td>Base de Datos I</td>
+                            <td>
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-info"
+                                    href="{% url 'editar' %}"
+                                    role="button"
+                                    >Editar</a
+                                >
+                                <a
+                                    name=""
+                                    id=""
+                                    class="btn btn-danger"
+                                    href="#"
+                                    role="button"
+                                    >Borrar</a
+                                >
+                            </td>   
+                        </tr>     
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        <div class="card-footer text-muted">Footer</div>
+    </div>
+    
+
+{% endblock %}
